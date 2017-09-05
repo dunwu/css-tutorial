@@ -1,0 +1,31 @@
+{
+  "name": "css-notes",
+  "description": "css 学习笔记",
+  "scripts": {
+    "clean": "rimraf _book",
+    "prepare": "gitbook install",
+    "build": "gitbook build -g atlantis1024/css-notes",
+    "start": "gitbook serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atlantis1024/css-notes.git"
+  },
+  "keywords": [
+    "css",
+    "css3",
+    "less",
+    "sass",
+    "postcss"
+  ],
+  "author": "Zhang Peng <atlantis1024@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atlantis1024/css-notes/issues"
+  },
+  "homepage": "https://github.com/atlantis1024/css-notes",
+  "devDependencies": {
+    "gitbook-cli": "^0.3.4",
+    "rimraf": "^2.3.4"
+  }
+}
