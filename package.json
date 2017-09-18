@@ -4,12 +4,12 @@
   "scripts": {
     "clean": "rimraf _book",
     "prepare": "gitbook install",
-    "build": "gitbook build -g atlantis1024/css-notes",
+    "build": "gitbook build -g zp1024/css-notes",
     "start": "gitbook serve"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/atlantis1024/css-notes.git"
+    "url": "https://github.com/zp1024/css-notes.git"
   },
   "keywords": [
     "css",
@@ -18,14 +18,14 @@
     "sass",
     "postcss"
   ],
-  "author": "Zhang Peng <atlantis1024@163.com>",
+  "author": "Zhang Peng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/atlantis1024/css-notes/issues"
+    "url": "https://github.com/zp1024/css-notes/issues"
   },
-  "homepage": "https://github.com/atlantis1024/css-notes",
+  "homepage": "https://github.com/zp1024/css-notes",
   "devDependencies": {
-    "gitbook-cli": "^0.3.4",
+    "gitbook-cli": "^2.3.2",
     "rimraf": "^2.3.4"
   }
 }
