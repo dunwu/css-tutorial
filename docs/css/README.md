@@ -1,8 +1,6 @@
 # CSS
 
-> 层叠样式表 (Cascading Style Sheets，常缩写记作 CSS）， 是一种样式表语言，用来描述 HTML 或 XML（包括如 SVG、XHTML 之类的 XML 分支语言）文档的呈现。CSS 描述了在屏幕、纸质、音频等其它媒体上的元素应该如何被渲染的问题。
->
-> CSS3 是级联样式表 / 层叠样式表(Cascading Style Sheets)语言的最新进化，旨在扩展CSS2.1。
+> 层叠样式表 — 也就是 [CSS](https://developer.mozilla.org/en-US/docs/Glossary/CSS) — 是你在 [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML) 之后应该学习的第二门技术。HTML 用于定义内容的结构和语义，CSS 用于设计风格和布局。比如，您可以使用 CSS 来更改内容的字体、颜色、大小、间距，将内容分为多列，或者添加动画及其他的装饰效果。
 
 ## 目录
 
