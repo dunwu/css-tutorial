@@ -12,11 +12,10 @@ CSS3 被划分为模块。
 
 - 选择器
 - 框模型
-- 背景和边框
-- 文本效果
+- 样式
+- 布局
 - 2D/3D 转换
 - 动画
-- 多列布局
 - 用户界面
 
 ## 框模型
@@ -216,63 +215,45 @@ p {word-wrap:break-word;}
 
 您“自己的”的字体是在 CSS3 @font-face 规则中定义的。
 
-## 浏览器支持
+#### 使用您需要的字体
 
-| 属性         | 浏览器支持 |      |      |      |      |
-| ---------- | ----- | ---- | ---- | ---- | ---- |
-| @font-face |       |      |      |      |      |
+在新的 `@font-face` 规则中，您必须首先定义字体的名称（比如 myFirstFont），然后指向该字体文件。
 
-Firefox、Chrome、Safari 以及 Opera 支持 .ttf (True Type Fonts) 和 .otf (OpenType Fonts) 类型的字体。
+如需为 HTML 元素使用字体，请通过 `font-family` 属性来引用字体的名称 (myFirstFont)：
 
-Internet Explorer 9+ 支持新的 @font-face 规则，但是仅支持 .eot 类型的字体 (Embedded OpenType)。
+实例
 
-注释：Internet Explorer 8 以及更早的版本不支持新的 @font-face 规则。
-
-## 使用您需要的字体
-
-在新的 @font-face 规则中，您必须首先定义字体的名称（比如 myFirstFont），然后指向该字体文件。
-
-如需为 HTML 元素使用字体，请通过 font-family 属性来引用字体的名称 (myFirstFont)：
-
-### 实例
-
-```
+```css
 <style> 
-@font-face
-{
-font-family: myFirstFont;
-src: url('Sansation_Light.ttf'),
-     url('Sansation_Light.eot'); /* IE9+ */
+@font-face {
+  font-family: myFirstFont;
+  src: url('../../assets/fonts/sansation-light.ttf'); /* IE9+ */
 }
 
-div
-{
-font-family:myFirstFont;
+div {
+  font-family: myFirstFont;
 }
 </style>
-
 ```
 
-[亲自试一试](http://www.w3school.com.cn/tiy/t.asp?f=css3_font-face_rule)
+#### 使用粗体字体
 
-## 使用粗体字体
+您必须为粗体文本添加另一个包含描述符的 `@font-face`：
 
-您必须为粗体文本添加另一个包含描述符的 @font-face：
+实例
 
-### 实例
-
-```
-@font-face
-{
-font-family: myFirstFont;
-src: url('Sansation_Bold.ttf'),
-     url('Sansation_Bold.eot'); /* IE9+ */
-font-weight:bold;
+```css
+@font-face {
+  font-family: myFirstFont;
+  src: url('../../assets/fonts/sansation-light.ttf'); /* IE9+ */
 }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url('../../assets/fonts/sansation-bold.ttf'); /* IE9+ */
+  font-weight: bold;
+}
 ```
-
-[亲自试一试](http://www.w3school.com.cn/tiy/t.asp?f=css3_font-face_rule_bold)
 
 文件 "Sansation_Bold.ttf" 是另一个字体文件，它包含了 Sansation 字体的粗体字符。
 
@@ -280,5 +261,85 @@ font-weight:bold;
 
 通过这种方式，我们可以为相同的字体设置许多 @font-face 规则。
 
+#### 字体描述符
 
+下面的表格列出了能够在 @font-face 规则中定义的所有字体描述符：
+
+| 描述符           | 值                                        | 描述                                       |
+| ------------- | ---------------------------------------- | ---------------------------------------- |
+| font-family   | *name*                                   | 必需。规定字体的名称。                              |
+| src           | *URL*                                    | 必需。定义字体文件的 URL。                          |
+| font-stretch  | normalcondensedultra-condensedextra-condensedsemi-condensedexpandedsemi-expandedextra-expandedultra-expanded | 可选。定义如何拉伸字体。默认是 "normal"。                |
+| font-style    | ormalitalicoblique                       | 可选。定义字体的样式。默认是 "normal"。                 |
+| font-weight   | normalbold100200300400500600700800900    | 可选。定义字体的粗细。默认是 "normal"。                 |
+| unicode-range | *unicode-range*                          | 可选。定义字体支持的 UNICODE 字符范围。默认是 "U+0-10FFFF"。 |
+
+## 布局
+
+通过 CSS3，您能够创建多个列来对文本进行布局 - 就像报纸那样！
+
+在本章中，您将学习如下多列属性：
+
+- column-count
+- column-gap
+- column-rule
+
+### 创建多列
+
+`column-count` 属性规定元素应该被分隔的列数：
+
+**实例：把 div 元素中的文本分隔为三列**
+
+```css
+div {
+  -moz-column-count: 3; /* Firefox */
+  -webkit-column-count: 3; /* Safari and Chrome */
+  column-count: 3;
+}
+```
+
+### 规定列之间的间隔
+
+`column-gap` 属性规定列之间的间隔：
+
+**实例：规定列之间 40 像素的间隔**
+
+```css
+div {
+  -moz-column-gap: 30px; /* Firefox */
+  -webkit-column-gap: 30px; /* Safari and Chrome */
+  column-gap: 30px;
+}
+```
+
+### 列规则
+
+`column-rule` 属性设置列之间的宽度、样式和颜色规则。
+
+实例
+
+规定列之间的宽度、样式和颜色规则：
+
+```css
+div {
+  -moz-column-rule:3px outset #ff0000;	/* Firefox */
+  -webkit-column-rule:3px outset #ff0000;	/* Safari and Chrome */
+  column-rule:3px outset #ff0000;
+}
+```
+
+### 列属性
+
+| 属性                | 描述                                      |
+| ----------------- | --------------------------------------- |
+| column-count      | 规定元素应该被分隔的列数。                           |
+| column-fill       | 规定如何填充列。                                |
+| column-gap        | 规定列之间的间隔。                               |
+| column-rule       | 设置所有 column-rule-* 属性的简写属性。             |
+| column-rule-color | 规定列之间规则的颜色。                             |
+| column-rule-style | 规定列之间规则的样式。                             |
+| column-rule-width | 规定列之间规则的宽度。                             |
+| column-span       | 规定元素应该横跨的列数。                            |
+| column-width      | 规定列的宽度。                                 |
+| columns           | 规定设置 column-width 和 column-count 的简写属性。 |
 
