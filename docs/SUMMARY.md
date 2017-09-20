@@ -14,9 +14,13 @@
     * [CSS 框模型](css/basics/css-box-model.md)
     * [CSS 定位](css/basics/css-positioning.md)
 
-------
+## CSS3
+
+* [CSS 快速入门](css3/css3-quickstart.md)
+* [CSS 快速入门（二）](css3/css3-quickstart2.md)
 
 ## 附录
 
 * [资料](appendix/resources.md)
+
 
