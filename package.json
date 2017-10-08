@@ -4,7 +4,7 @@
   "scripts": {
     "clean": "rimraf _book",
     "prepare": "gitbook install",
-    "build": "gitbook build -g zp1024/css-notes",
+    "build": "gitbook build ./ --log=debug --debug",
     "start": "gitbook serve"
   },
   "repository": {
