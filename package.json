@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zp1024/css-notes.git"
+    "url": "https://github.com/dunwu/css-notes.git"
   },
   "keywords": [
     "css",
@@ -21,9 +21,9 @@
   "author": "Zhang Peng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zp1024/css-notes/issues"
+    "url": "https://github.com/dunwu/css-notes/issues"
   },
-  "homepage": "https://github.com/zp1024/css-notes",
+  "homepage": "https://github.com/dunwu/css-notes",
   "devDependencies": {
     "gitbook-cli": "^2.3.2",
     "rimraf": "^2.3.4"
